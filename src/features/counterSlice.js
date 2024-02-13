@@ -14,9 +14,9 @@ export const counter = createSlice({
         diminuer(state){
             state.value--
         },
-        multiplier(state){
-            state.payload = 10
-            state.value = state.value * state.payload
+        multiplier(state, action){
+            action.payload = 10
+            state.value = state.value * action.payload
         },
         diviser(state){
             state.value = state.value / 3
